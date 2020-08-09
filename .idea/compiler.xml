@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="workrc-core" />
-        <module name="workrc-blog" />
         <module name="workrc-oauth" />
-        <module name="workrc-common" />
         <module name="workrc-startup" />
+        <module name="workrc-blog" />
+        <module name="workrc-common" />
       </profile>
     </annotationProcessing>
   </component>
