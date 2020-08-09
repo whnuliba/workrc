@@ -1,0 +1,8 @@
+com\workrc\core\base\entity\BaseEntity.class
+com\workrc\core\config\dynamic\DynamicDataSourceRegister.class
+com\workrc\core\config\dynamic\DataSource.class
+com\workrc\core\config\dynamic\DynamicDataSourceContextHolder.class
+com\workrc\core\global\CurrentUserHolder.class
+com\workrc\core\config\dynamic\DynamicDataSourceAspect.class
+com\workrc\core\config\dynamic\DynamicRoutingDataSource.class
+com\workrc\core\base\entity\BaseDto.class

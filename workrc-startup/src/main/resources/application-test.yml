@@ -1,0 +1,60 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /workrc
+  max-http-header-size: 10000000
+  debug: true
+
+mybatis:
+  mapper-locations:
+    #- classpath*:sqlserver/*/*Mapper.xml
+    - classpath*:mysql/*/*Mapper.xml
+  type-aliases-package: com.workrc.**.mapper
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  datasource:
+    master:
+      #      password: 123456
+      password: 123
+      #      url: jdbc:mysql://168.8.10.142:3306/test?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3306/workrc_blog?useUnicode=true&characterEncoding=UTF-8
+      driver-class-name: com.mysql.jdbc.Driver
+      #      username: wanghao
+      username: root
+    cluster:
+      - key: workrc_blog
+        #      password: 123456
+        password: 123
+        #      url: jdbc:mysql://168.8.10.142:3306/test?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://localhost:3306/workrc_blog?useUnicode=true&characterEncoding=UTF-8
+        idle-timeout: 20000
+        driver-class-name: com.mysql.jdbc.Driver
+        #      username: wanghao
+        username: root
+        type: com.zaxxer.hikari.HikariDataSource
+      - key: slave2
+        #      password: 123456
+        password: 123456
+        #      url: jdbc:mysql://168.8.10.142:3306/test?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://168.8.10.142:3306/test?useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        #      username: wanghao
+        username: wanghao
+  thymeleaf:
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    cache: false
+    servlet:
+      content-type: text/html
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+#  devtools:
+#    restart:
+#      additional-paths: src/main/java
+#      enabled: true
+report:
+  path: D:\\临时文件\workrc
+logging:
+  config: classpath:log4j2-spring.xml

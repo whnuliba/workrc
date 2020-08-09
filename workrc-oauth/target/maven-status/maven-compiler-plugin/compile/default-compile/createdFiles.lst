@@ -1,0 +1,6 @@
+com\workrc\oauth\orm\service\UserInfoService.class
+com\workrc\oauth\orm\mapper\MyBatisBaseDao.class
+com\workrc\oauth\orm\service\impl\UserInfoServiceImpl.class
+com\workrc\oauth\controller\UserInfoController.class
+com\workrc\oauth\orm\mapper\UserInfoMapper.class
+com\workrc\oauth\orm\entity\UserInfo.class
