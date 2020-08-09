@@ -23,7 +23,7 @@ import 'moment/locale/zh-cn';
 
 import thunk from 'redux-thunk';
 import {reducer} from './index.redux';
-moment.locale('zh-cn');  //s
+moment.locale('zh-cn');  //ss
 const store=createStore(reducer,compose(applyMiddleware(thunk),window.devToolsExtension?window.devToolsExtension():f=>f));
 ReactDOM.render(
     <Provider store={store}>
